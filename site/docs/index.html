@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation | Data Wave</title>
+  <meta name="description" content="Documentation for Data Wave CDP: functional characteristics, installation procedure and operating information. Data Wave CDP is listed in the Russian Software Registry.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Data Wave">
+  <meta property="og:title" content="Documentation | Data Wave">
+  <meta property="og:description" content="Documentation for Data Wave CDP: functional characteristics, installation procedure and operating information. Data Wave CDP is listed in the Russian Software Registry.">
+  <link rel="alternate" hreflang="ru" href="https://data-wave.ru/doc/">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body data-section="docs">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0 1 14 0"/><path d="M19 2v5M16.5 4.5h5"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="16" width="7" height="5" rx="1.5"/><path d="M10 5.5h4M17.5 8v8"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-basket" viewBox="0 0 24 24"><path d="M4 9h16l-1.6 10.3a2 2 0 0 1-2 1.7H7.6a2 2 0 0 1-2-1.7z"/><path d="M8.5 9L12 3l3.5 6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="3" width="10" height="18" rx="1"/><path d="M14 9h5a1 1 0 0 1 1 1v11M8 7h2M8 11h2M8 15h2M2 21h20"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.2a1.5 1.5 0 0 0 1.5 1.3h8.6a1.5 1.5 0 0 0 1.5-1.2L21 7H6"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 2v3M12 2v3"/></symbol>
+  <symbol id="i-signal" viewBox="0 0 24 24"><path d="M1.5 9a15 15 0 0 1 21 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5a5 5 0 0 1-7-7l10-10a5 5 0 0 1 7 7z"/><path d="M8.5 8.5l7 7"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.4A8 8 0 1 1 21 12z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5a6.5 6.5 0 0 1 3 5.5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10M2 10l2-6h16l2 6zM9 20v-5h6v5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 12l10 5 10-5M2 17l10 5 10-5"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-profile" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17a3.5 3.5 0 0 1 7 0M15 9h3M15 13h3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-funnel" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 32 32"><path d="M5 12.5c2.8-2.7 5.2-2.7 8 0s5.2 2.7 8 0 3.9-2.2 6-1.6"/><path d="M5 19.5c2.8-2.7 5.2-2.7 8 0s5.2 2.7 8 0 3.9-2.2 6-1.6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../" aria-label="Data Wave home">
+      <span class="brand-mark"><svg aria-hidden="true"><use href="#i-logo"/></svg></span>
+      <span class="brand-name">Data Wave</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg aria-hidden="true" class="icon icon-open"><use href="#i-menu"/></svg>
+      <svg aria-hidden="true" class="icon icon-close"><use href="#i-close"/></svg>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub nav-products">
+          <button class="nav-link sub-toggle" type="button" aria-expanded="false">Products <svg aria-hidden="true" class="icon chevron"><use href="#i-chevron"/></svg></button>
+          <ul class="sub">
+            <li><a href="../products/analytics/"><svg aria-hidden="true" class="icon"><use href="#i-chart"/></svg><span><strong>Analytics</strong><small>Learn more about your customers</small></span></a></li>
+            <li><a href="../products/content-personalization/"><svg aria-hidden="true" class="icon"><use href="#i-person"/></svg><span><strong>Content personalization</strong><small>Unique content for every user</small></span></a></li>
+            <li><a href="../products/campaign-manager/"><svg aria-hidden="true" class="icon"><use href="#i-flow"/></svg><span><strong>Campaign Manager</strong><small>Zero-code communication builder</small></span></a></li>
+            <li><a href="../products/scoring/"><svg aria-hidden="true" class="icon"><use href="#i-target"/></svg><span><strong>Scoring</strong><small>Focus on the warmest leads</small></span></a></li>
+            <li><a href="../products/dynamic-pricing/"><svg aria-hidden="true" class="icon"><use href="#i-tag"/></svg><span><strong>Dynamic pricing</strong><small>Real-time revenue optimization</small></span></a></li>
+          </ul>
+        </li>
+        <li class="has-sub nav-solutions">
+          <button class="nav-link sub-toggle" type="button" aria-expanded="false">Solutions <svg aria-hidden="true" class="icon chevron"><use href="#i-chevron"/></svg></button>
+          <ul class="sub">
+            <li><a href="../solutions/fmcg/"><svg aria-hidden="true" class="icon"><use href="#i-basket"/></svg><span><strong>FMCG</strong></span></a></li>
+            <li><a href="../solutions/#real-estate"><svg aria-hidden="true" class="icon"><use href="#i-building"/></svg><span><strong>Real estate</strong></span></a></li>
+            <li><a href="../solutions/#retail"><svg aria-hidden="true" class="icon"><use href="#i-cart"/></svg><span><strong>Retail</strong></span></a></li>
+            <li><a href="../solutions/#horeca"><svg aria-hidden="true" class="icon"><use href="#i-cup"/></svg><span><strong>HoReCa</strong></span></a></li>
+            <li><a href="../solutions/#telecom"><svg aria-hidden="true" class="icon"><use href="#i-signal"/></svg><span><strong>Telecom</strong></span></a></li>
+            <li><a href="../solutions/#pharma"><svg aria-hidden="true" class="icon"><use href="#i-pill"/></svg><span><strong>Pharma</strong></span></a></li>
+            <li><a href="../solutions/#finance"><svg aria-hidden="true" class="icon"><use href="#i-bank"/></svg><span><strong>Financial services</strong></span></a></li>
+            <li class="sub-all"><a href="../solutions/"><span><strong>All industries</strong></span><svg aria-hidden="true" class="icon"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+        </li>
+        <li class="nav-about"><a class="nav-link" href="../about/">About</a></li>
+        <li class="nav-blog"><a class="nav-link" href="../blog/">Blog</a></li>
+        <li class="nav-docs"><a class="nav-link" href="../docs/" aria-current="page">Docs</a></li>
+        <li class="nav-contacts"><a class="nav-link" href="../contacts/">Contacts</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="lang-switch" href="https://data-wave.ru/doc/" hreflang="ru" lang="ru" title="Русская версия">RU</a>
+        <a class="btn btn-primary" href="../contacts/#demo">Book a demo</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="section-dark hero hero-page">
+  <div class="container">
+    <ol class="breadcrumbs">
+      <li><a href="../">Home</a></li>
+      <li>Documentation</li>
+    </ol>
+    <p class="eyebrow">Documentation</p>
+    <h1>Data Wave CDP documentation</h1>
+    <p class="lead">Data Wave CDP is listed in the Russian Software Registry. This page summarizes its documentation in English. The full documents are published in Russian.</p>
+  </div>
+  <svg class="hero-waves" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path d="M0 60 C 240 20, 480 100, 720 60 S 1200 20, 1440 60" stroke="rgba(103,232,249,0.35)"/>
+  <path d="M0 72 C 240 32, 480 112, 720 72 S 1200 32, 1440 72" stroke="rgba(59,120,255,0.35)"/>
+  <path d="M0 84 C 240 44, 480 124, 720 84 S 1200 44, 1440 84" stroke="rgba(255,255,255,0.12)"/>
+</svg>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      <a class="card doc-card" href="https://data-wave.ru/doc/" hreflang="ru">
+        <span class="card-icon"><svg aria-hidden="true" class="icon"><use href="#i-doc"/></svg></span>
+        <h2 class="h3">Description of functional characteristics</h2>
+        <p>What the software does and the functions it provides. Summary below.</p>
+        <span class="link-arrow">Full document (RU) <svg aria-hidden="true" class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card doc-card" href="https://data-wave.ru/poryadok-ustanovki-resheniya-data-wave-cdp/" hreflang="ru">
+        <span class="card-icon"><svg aria-hidden="true" class="icon"><use href="#i-layers"/></svg></span>
+        <h2 class="h3">Installation procedure for Data Wave CDP</h2>
+        <p>Requirements for deploying the solution, grouped into three blocks: user qualifications (developers), the server infrastructure for deployment and workstations.</p>
+        <span class="link-arrow">Full document (RU) <svg aria-hidden="true" class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="card doc-card" href="https://data-wave.ru/informacziya-neobhodimaya-dlya-ekspluataczii-programmnogo-obespecheniya/" hreflang="ru">
+        <span class="card-icon"><svg aria-hidden="true" class="icon"><use href="#i-shield"/></svg></span>
+        <h2 class="h3">Information required to operate the software</h2>
+        <p>Information needed for the operation of Data Wave CDP.</p>
+        <span class="link-arrow">Full document (RU) <svg aria-hidden="true" class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="functional-overview">
+  <div class="container article">
+    <h2>Functional overview</h2>
+    <p>Data Wave CDP is designed to collect data, aggregate information about users and communicate with them.</p>
+
+    <h3>Data collection</h3>
+    <p>The CDP extracts customer data from multiple sources, such as transaction systems, online behavior, the call center, demographic data or POS.</p>
+
+    <h3>Identity management</h3>
+    <p>The CDP identifies customers across multiple channels through deterministic matching and profile stitching based on identifiers in the incoming data. It creates and maintains a persistent customer identifier.</p>
+
+    <h3>Segmentation and enrichment</h3>
+    <p>Customers can be segmented, including in real time. Profiles can be enriched with insights from third-party DMP providers.</p>
+
+    <h3>Website and recommendations</h3>
+    <ul>
+      <li>Website behavior management</li>
+      <li>Banner management</li>
+      <li>Recommendation systems</li>
+      <li>No-code personalization of banners, sections and individual blocks for user segments</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-cta">
+  <div class="container">
+    <div class="cta">
+      <div class="cta-grid">
+        <div>
+          <p class="eyebrow">Book a demo</p>
+          <h2>See Data Wave in action</h2>
+        </div>
+        <div>
+          <p class="lead">Book a platform demo and get a dedicated manager who supports you at every stage of the project, starting with the demo.</p>
+          <div class="btn-row">
+            <a class="btn btn-light" href="../contacts/#demo">Book a demo <svg aria-hidden="true" class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="mailto:info@datawave.ru">info@datawave.ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand brand-light" href="../">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#i-logo"/></svg></span>
+        <span class="brand-name">Data Wave</span>
+      </a>
+      <p>A customer-centric platform that combines advanced data analytics with multichannel campaign execution.</p>
+      <p class="footer-registry"><svg aria-hidden="true" class="icon"><use href="#i-shield"/></svg> Data Wave CDP is listed in the Russian Software Registry.</p>
+    </div>
+    <div>
+      <h2 class="footer-title">Products</h2>
+      <ul class="footer-links">
+        <li><a href="../products/analytics/">Analytics</a></li>
+        <li><a href="../products/content-personalization/">Content personalization</a></li>
+        <li><a href="../products/campaign-manager/">Campaign Manager</a></li>
+        <li><a href="../products/scoring/">Scoring</a></li>
+        <li><a href="../products/dynamic-pricing/">Dynamic pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Company</h2>
+      <ul class="footer-links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="../solutions/">Solutions</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../docs/" aria-current="page">Documentation</a></li>
+        <li><a href="../contacts/">Contacts</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Contact us</h2>
+      <ul class="footer-contacts">
+        <li><svg aria-hidden="true" class="icon"><use href="#i-call"/></svg><a href="tel:+74952568990">+7&nbsp;495&nbsp;256&#8209;89&#8209;90</a></li>
+        <li><svg aria-hidden="true" class="icon"><use href="#i-mail"/></svg><a href="mailto:info@datawave.ru">info@datawave.ru</a></li>
+        <li><svg aria-hidden="true" class="icon"><use href="#i-pin"/></svg><span>26 Malaya Bronnaya St., Bldg. 2, Moscow, Russia</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span data-year>2026</span> Data Wave. All rights reserved.</p>
+    <p><a href="https://data-wave.ru/doc/" hreflang="ru" lang="ru">Русская версия</a></p>
+  </div>
+</footer>
+</body>
+</html>
