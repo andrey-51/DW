@@ -1,0 +1,14 @@
+/* Additions for the English site. Everything else is the original data-wave.ru theme. */
+
+/* English labels are longer than the Russian ones: keep header items on one line. */
+.header__nav > li > a,
+.header__btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  /* Keep the address clear of the menu's close button. */
+  .header__city {
+    padding-right: 48px;
+  }
+}

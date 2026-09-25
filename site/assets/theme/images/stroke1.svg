@@ -1,0 +1,21 @@
+<svg width="173" height="201" viewBox="0 0 173 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 288727">
+<g id="Group 288734">
+<g id="Group 288733">
+<path id="Vector 396" d="M25 27H52C118.274 27 172 80.7258 172 147V201" stroke="url(#paint0_linear_604_22040)" stroke-width="2"/>
+<circle id="Ellipse 8" cx="24.5885" cy="24.5885" r="18" transform="rotate(-120 24.5885 24.5885)" fill="url(#paint1_linear_604_22040)" fill-opacity="0.1"/>
+</g>
+<circle id="Ellipse 9" cx="24.5879" cy="24.5886" r="6" fill="#3FD0FF"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_604_22040" x1="25" y1="201" x2="209.154" y2="140.962" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3FD0FF"/>
+<stop offset="1" stop-color="#2366F2"/>
+</linearGradient>
+<linearGradient id="paint1_linear_604_22040" x1="20.676" y1="-14.0073" x2="20.676" y2="42.5885" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3FD0FF"/>
+<stop offset="1" stop-color="#080719"/>
+</linearGradient>
+</defs>
+</svg>

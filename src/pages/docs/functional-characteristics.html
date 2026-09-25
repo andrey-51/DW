@@ -1,0 +1,639 @@
+<!--
+title: Description of functional characteristics
+description: This user guide describes the operating rules, methods and principles
+body_class: wp-singular page-template page-template-page-info page-template-page-info-php page wp-theme-clean_template elementor-default elementor-kit-1071
+ru: https://data-wave.ru/doc/
+-->
+<section class="info-page">
+    <div class="container">
+        <h1 class="info-page__title">Description of functional characteristics</h1>
+        
+<p class="wp-block-paragraph"><strong>Description of functional characteristics</strong></p>
+
+
+
+<p class="wp-block-paragraph"><strong>of the “DataWave” software and information</strong></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h1 class="wp-block-heading"><a id="_Toc118277672">Introduction</a></h1>
+
+
+
+<p class="wp-block-paragraph">This user guide describes the operating rules, methods and principles</p>
+
+
+
+<p class="wp-block-paragraph">of the “DataWave” software (hereinafter “developer”, “CDP”).</p>
+
+
+
+<h1 class="wp-block-heading"><a id="_Toc118277673">Functional characteristics</a></h1>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277674">1.1. Objectives and purpose</a></h2>
+
+
+
+<p class="wp-block-paragraph">This software is program code whose purpose is the collection and aggregation of user information, including communication with the user.</p>
+
+
+
+<p class="wp-block-paragraph">Objectives:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Communication</li>
+
+
+
+<li>Analysis of user actions after communication</li>
+
+
+
+<li>Communication planning</li>
+
+
+
+<li>Provision of components</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Purpose:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Communicate with users via chatbots, social networks, messaging apps and push messages.</li>
+
+
+
+<li>Create recommendations for products, services and rate plans on the website, in the mobile app and in partner integrations.</li>
+
+
+
+<li>Analyze behavior and predict customer needs based on ML models.</li>
+
+
+
+<li>Create your own personalized loyalty programs, promotions, bonus systems and gamification of the interaction process.</li>
+
+
+
+<li>Build offers personalized for each customer: product, price, timing and bonus</li>
+
+
+
+<li>Enrich data on customers and their needs, including through third-party DMP providers.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277675">1.2. Key functions</a></h2>
+
+
+
+<p class="wp-block-paragraph">Main functions</p>
+
+
+
+<ul class="wp-block-list">
+<li>Receiving audience data from multiple sources.</li>
+
+
+
+<li>Managing customer identity data.</li>
+
+
+
+<li>Supporting real-time customer segmentation.</li>
+
+
+
+<li>Providing customer data to other systems.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><strong>Data ingestion.</strong> CDPs extract customer data from multiple sources (for example, transactional systems, online behavior, call center, demographic data or POS).</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Identity management. </strong>CDPs resolve customer identities across multiple channels, most of them using deterministic matching and profile stitching with identifiers provided in the incoming data. A CDP creates and maintains a persistent customer identifier.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Segmentation.</strong> CDPs enable marketers to create and maintain universal omnichannel audience segmentation using unified data in the CDP.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Data delivery / activation.</strong> CDPs facilitate the activation of information and of the single customer profile created in the CDP by providing connectors and APIs for other marketing technologies.</p>
+
+
+
+<h1 class="wp-block-heading"><a id="_Toc118277676">Information required to install and operate the suite</a></h1>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277677">2.1. System requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">Deployment of the software suite is subject to three main groups of requirements:</p>
+
+
+
+<ul class="wp-block-list">
+<li>workstation requirements for users of the suite (developers)</li>
+
+
+
+<li>qualification requirements for users of the suite (developers)</li>
+
+
+
+<li>requirements for the server infrastructure in which the suite will be deployed</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277678">2.2. User workstation requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">The workstation must meet the following requirements:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Operating system:<ul><li>Linux</li></ul><ul><li>MacOS</li></ul>
+<ul class="wp-block-list">
+<li>Windows</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277679">2.3. User qualification requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">A user of the suite must have the following competencies:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Knowledge of marketing fundamentals</li>
+
+
+
+<li>Knowledge of the fundamentals of designing user interaction logic (optional)</li>
+
+
+
+<li>Knowledge of algorithms (optional)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a id="_Toc118277680">2.4. Server infrastructure requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">To deploy the suite in production mode, you need to prepare a server that</p>
+
+
+
+<p class="wp-block-paragraph">must meet the following specifications:</p>
+
+
+
+<p class="wp-block-paragraph">Hardware requirements (recommended):</p>
+
+
+
+<ul class="wp-block-list">
+<li>CPU-2</li>
+
+
+
+<li>Memory: 128 GB DDR4</li>
+
+
+
+<li>Swap: 2GB</li>
+
+
+
+<li>Storage:<ul><li>2 × 480 GB SATA SSD</li></ul>
+<ul class="wp-block-list">
+<li>2 × 1920 GB SATA SSD</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading"><a></a><a id="_Toc118277681">Description of database characteristics</a></h1>
+
+
+
+<p class="wp-block-paragraph">For the system and its subsystems to function, the connected databases must meet the following requirements:</p>
+
+
+
+<ul class="wp-block-list">
+<li>database integrity: the requirement for data completeness and consistency;</li>
+
+
+
+<li>protection of data against unauthorized access, alteration and destruction.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">The following databases can be selected (recommended):</p>
+
+
+
+<ul class="wp-block-list">
+<li>PostgreSQL</li>
+
+
+
+<li>MongoDb </li>
+</ul>
+
+
+
+<h1 class="wp-block-heading"><a id="_Toc118277682">Description of platform modules and their characteristics</a></h1>
+
+
+
+<h3 class="wp-block-heading">Module: Single profile</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective: </strong>collecting user information</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Collecting and merging customer data</li>
+
+
+
+<li>Searching for customers in the database</li>
+
+
+
+<li>Storing user lists</li>
+
+
+
+<li>Managing preferences and consents</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Segments</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective:</strong> creating selections from the customer database</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Segmenting customers by selected criteria</li>
+
+
+
+<li>Creating complex segments</li>
+
+
+
+<li>Viewing saved segments</li>
+
+
+
+<li>Editing saved segments</li>
+
+
+
+<li>Deleting saved segments</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Templates</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective:</strong> creating communication templates for launching campaigns</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Creating SMS, email, pop-up, push and website page templates</li>
+
+
+
+<li>Test sends</li>
+
+
+
+<li>Previews</li>
+
+
+
+<li>Attributes and attribute groups</li>
+
+
+
+<li>HTML editor and drag-and-drop builder for all types of personalization</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Personalization</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective: </strong>configuring template display for segments</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Selecting a segment for displaying website personalization and pop-up templates</li>
+
+
+
+<li>Configuring display timing</li>
+
+
+
+<li>Configuring pages for display</li>
+
+
+
+<li>Viewing statistics</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Campaigns</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective: </strong>a visual builder for executing tasks according to an algorithm predefined by the user, taking into account trigger events generated by users or the system</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Creating campaign trigger chains</li>
+
+
+
+<li>Configuring a chain to be shown to a specific segment</li>
+
+
+
+<li>Running A/B tests</li>
+
+
+
+<li>Operators</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Surveys</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Objective:</strong> launching and creating surveys</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Creating a survey</li>
+
+
+
+<li>Viewing the list of survey campaigns</li>
+
+
+
+<li>Changing campaign status</li>
+
+
+
+<li>Viewing statistics</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Global control groups</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective: </strong>evaluating mailing effectiveness by excluding a certain number of random users from communication</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Starting/stopping control groups</li>
+
+
+
+<li>Configuring exclusions</li>
+
+
+
+<li>Filtering by brand</li>
+
+
+
+<li>Configuring control group size and setting how long users remain in the group</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Scoring</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Objective:</strong> creating and configuring a Scoring model to assess lead “warmth”</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Creating and configuring the model</li>
+
+
+
+<li>Managing points</li>
+
+
+
+<li>Viewing statistics</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: Analytics</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Objective: </strong>viewing statistics and analytics for Pixel, Campaigns, Personalization, Lead scoring, Advertising channels, etc.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Adding dashboards;</li>
+
+
+
+<li>Viewing statistics by period;</li>
+
+
+
+<li>Viewing statistics by brand</li>
+
+
+
+<li>Module: Integrations</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Module: DSP</h3>
+
+
+
+<p class="wp-block-paragraph"><strong>Module objective:</strong> configuring segments and transferring them to advertising accounts</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Features: </strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Exporting segments</li>
+
+
+
+<li>Uploading segments</li>
+
+
+
+<li>Viewing segment status</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<h3 class="wp-block-heading"><a id="_Toc118277693">Other modules:</a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Brands: a section for creating “brands” to which subsequent campaigns will be linked when they are built</li>
+
+
+
+<li>Users: a section for creating role-based access models in the system</li>
+
+
+
+<li>Event Log: a section for administering user actions within the system</li>
+
+
+
+<li>Keys: a system component designed for working with API (Application Programming Interface) keys</li>
+
+
+
+<li>Pixel: a tracker installed on the website that is needed to collect various information about the customer and sends the collected data to the CDP for subsequent processing and analysis</li>
+
+
+
+<li>Integrations: creating integrations with advertising accounts</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading"><a id="_Toc118277694">Technical support</a></h1>
+
+
+
+<p class="wp-block-paragraph">Questions arising while working with the suite should be sent to the support team</p>
+
+
+
+<p class="wp-block-paragraph">at info@datawave.ru</p>
+
+
+
+<p class="wp-block-paragraph">All requests are reviewed during business hours (Europe GMT+3); responses and</p>
+
+
+
+<p class="wp-block-paragraph">support are normally provided no later than 48 hours after the request is received.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="{{root}}docs/operation/">Information required to operate the software</a></div>
+</div>
+    </div>
+</section>

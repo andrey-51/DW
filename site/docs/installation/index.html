@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <title>Installation procedure for Data Wave CDP | Data Wave</title>
+  <meta name="description" content="Deployment of the software suite is subject to three main groups of requirements:">
+  <meta property="og:description" content="Deployment of the software suite is subject to three main groups of requirements:">
+  <link rel="alternate" hreflang="ru" href="https://data-wave.ru/poryadok-ustanovki-resheniya-data-wave-cdp/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Data Wave">
+  <meta property="og:title" content="Installation procedure for Data Wave CDP | Data Wave">
+  <link rel="icon" href="../../assets/uploads/2025/02/logo-na-sajt-4h-1.png" type="image/png">
+  <link rel="stylesheet" href="../../assets/vendor/wordpress/wp-styles.css">
+  <link rel="stylesheet" href="../../assets/vendor/contact-form-7/includes/css/styles.css">
+  <link rel="stylesheet" href="../../assets/theme/libs/select/select2.min.css">
+  <link rel="stylesheet" href="../../assets/theme/libs/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../../assets/theme/libs/slick/slick.css">
+  <link rel="stylesheet" href="../../assets/theme/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/en.css">
+</head>
+<body class="wp-singular page-template page-template-page-info page-template-page-info-php page wp-theme-clean_template elementor-default elementor-kit-1071">
+<div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="showcase__decor">
+            <div class="showcase__circles">
+                <div class="showcase__img">
+                    <img alt="" src="../../assets/uploads/2025/03/1h.svg"/>
+                </div>
+                <div class="showcase__circle showcase__circle-first"></div>
+                <div class="showcase__circle showcase__circle-second"></div>
+                <div class="showcase__circle showcase__circle-third"></div>
+                <div class="showcase__circle showcase__circle-four"></div>
+                <div class="showcase__circle showcase__circle-five"></div>
+                <div class="showcase__circle showcase__circle-six"></div>
+                <div class="showcase__circle showcase__circle-seven"></div>
+            </div>
+        </div>
+        <div class="loader-section"></div>
+
+    </div>
+<div class="wrapper">
+<header class="header element-animation">
+            <div class="container">
+                <div class="header__items">
+                    <div class="header__logos">
+                        <a class="header__logo" href="../../"><img alt="" src="../../assets/uploads/2025/03/1h.svg"/>
+                            <img alt="" src="../../assets/uploads/2023/10/logo-mob.svg"/>
+                        </a>
+                        <div class="header__descr">Customer data management services</div>
+                    </div>
+
+                    <div class="header__mobile">
+                        <div class="header__mobile-top">
+                            <div class="header__city">Moscow, 19 Bumazhny Proezd, Bldg. 4, Tower C, Floor 7, Stone Towers Business Center</div>
+                            <ul class="header__nav" id="menu-navigacziya-v-shapke"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-315" id="menu-item-315"><a href="../../about/">About</a><ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328" id="menu-item-328"><a href="../../about/#about-us">About the platform</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-329" id="menu-item-329"><a href="../../about/#action">Datawave in action</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-330" id="menu-item-330"><a href="../../about/#team">Project team</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-331" id="menu-item-331"><a href="../../about/#clients">Clients and partners</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-316" id="menu-item-316"><a>Products</a><ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-products menu-item-318" id="menu-item-318"><a href="../../products/scoring/">Scoring</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-products menu-item-319" id="menu-item-319"><a href="../../products/campaign-manager/">Campaign Manager</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-products menu-item-320" id="menu-item-320"><a href="../../products/analytics/">Analytics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-products menu-item-321" id="menu-item-321"><a href="../../products/content-personalization/">Content personalization</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-products menu-item-1031" id="menu-item-1031"><a href="../../products/dynamic-pricing/">Dynamic pricing with DataWave</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-317" id="menu-item-317"><a>Solutions</a><ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-1308" id="menu-item-1308"><a href="../../solutions/horeca/">HoReCa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-322" id="menu-item-322"><a href="../../solutions/fmcg/">FMCG sector</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-323" id="menu-item-323"><a href="../../solutions/real-estate/">Real estate</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-324" id="menu-item-324"><a href="../../solutions/retail/">Retail</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-325" id="menu-item-325"><a href="../../solutions/telecom/">Telecom</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-326" id="menu-item-326"><a href="../../solutions/pharma/">Pharmaceuticals</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-solutions menu-item-327" id="menu-item-327"><a href="../../solutions/finance/">Financial sector</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313" id="menu-item-313"><a href="../../blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-314" id="menu-item-314"><a href="../../contacts/">Contacts</a></li>
+<li class="menu-item menu-item-lang"><a href="https://data-wave.ru/poryadok-ustanovki-resheniya-data-wave-cdp/" hreflang="ru" lang="ru" title="Русская версия">RU</a></li></ul>                        </div><a class="header__btn" data-fancybox="" href="#modal-call">Request a call</a></div>
+                    <div class="burger">
+                        <img alt="" src="../../assets/theme/images/burger.svg"/>
+                        <img alt="" src="../../assets/theme/images/exit.svg"/>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+<section class="info-page">
+    <div class="container">
+        <h1 class="info-page__title">Installation procedure for Data Wave CDP</h1>
+        
+<h1 class="wp-block-heading"><a>System requirements</a></h1>
+
+
+
+<p class="wp-block-paragraph">Deployment of the software suite is subject to three main groups of requirements:</p>
+
+
+
+<ul class="wp-block-list">
+<li>workstation requirements for users of the suite (developers)</li>
+
+
+
+<li>qualification requirements for users of the suite (developers)</li>
+
+
+
+<li>requirements for the server infrastructure in which the suite will be deployed</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a>User workstation requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">The workstation must meet the following requirements:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Operating system:<ul><li>Linux</li></ul><ul><li>MacOS</li></ul>
+<ul class="wp-block-list">
+<li>Windows</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a>User qualification requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">A user of the suite must have the following competencies:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Knowledge of marketing fundamentals</li>
+
+
+
+<li>Knowledge of the fundamentals of designing user interaction logic (optional)</li>
+
+
+
+<li>Knowledge of algorithms (optional)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a>Server infrastructure requirements</a></h2>
+
+
+
+<p class="wp-block-paragraph">To deploy the suite in production mode, you need to prepare a server that</p>
+
+
+
+<p class="wp-block-paragraph">must meet the following specifications:</p>
+
+
+
+<p class="wp-block-paragraph">Hardware requirements (recommended):</p>
+
+
+
+<ul class="wp-block-list">
+<li>CPU-2</li>
+
+
+
+<li>Memory: 128 GB DDR4</li>
+
+
+
+<li>Swap: 2GB</li>
+
+
+
+<li>Storage:<ul class="wp-block-list">
+<li>2 × 480 GB SATA SSD</li>
+
+
+
+<li>2 × 1920 GB SATA SSD</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__items">
+            <div class="footer__head">
+                <a class="footer__logo" href="../../"><img alt="" src="../../assets/uploads/2025/03/1h.svg"/></a>
+                <div class="footer__adress">Moscow, 19 Bumazhny Proezd, Bldg. 4, Tower C, Floor 7, Stone Towers Business Center</div>
+                <div class="footer__contacts">
+                    <a class="footer__tel" href="tel:">
+                                            </a>
+                    <a class="footer__mail" href="mailto:info@datawave.ru">
+                        info@datawave.ru                    </a>
+                </div>
+                <div class="footer__socials footer__socials-mobile">
+                                    </div>
+                <div class="footer__news">
+                    <p>Stay up to date with Datawave news</p>
+                    
+<div class="wpcf7 no-js" data-wpcf7-id="149" dir="ltr" id="wpcf7-f149-o101" lang="en">
+<div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p> <ul></ul></div>
+<form action="#" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
+<div style="display: none;">
+<input name="_wpcf7" type="hidden" value="149"/>
+<input name="_wpcf7_version" type="hidden" value="6.0.4"/>
+<input name="_wpcf7_locale" type="hidden" value="ru_RU"/>
+<input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f149-o101"/>
+<input name="_wpcf7_container_post" type="hidden" value="0"/>
+<input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+</div>
+<div class="footer__input">
+	<p><span class="wpcf7-form-control-wrap" data-name="email-720"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" maxlength="400" name="email-720" placeholder="Enter your email" size="40" type="email" value=""/></span>
+	</p>
+</div>
+<div class="footer__btn">
+	<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send"/>
+	</p>
+</div><div aria-hidden="true" class="wpcf7-response-output"></div>
+</form>
+</div>
+                </div>
+            </div>
+            <div class="footer__content">
+                <div class="footer__blocks footer__blocks-first">
+                    <ul class="footer__nav-new" id="menu-menyu-podval"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276" id="menu-item-1276"><a href="../../about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277" id="menu-item-1277"><a href="../../blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278" id="menu-item-1278"><a href="../../contacts/">Contacts</a></li>
+</ul>                </div>
+                <div class="footer__blocks footer__blocks-second">
+                    <div class="footer__block">
+                        <div class="footer__name">Products<svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd" d="M16.2071 9.79289C15.8166 9.40237 15.1834 9.40237 14.7929 9.79289L12 12.5858L9.20711 9.79289C8.81658 9.40237 8.18342 9.40237 7.79289 9.79289C7.40237 10.1834 7.40237 10.8166 7.79289 11.2071L11.2929 14.7071C11.6834 15.0976 12.3166 15.0976 12.7071 14.7071L16.2071 11.2071C16.5976 10.8166 16.5976 10.1834 16.2071 9.79289Z" fill="white" fill-opacity="0.7" fill-rule="evenodd"></path>
+                            </svg></div>
+                        <ul class="footer__nav">
+                            
+                                                                    <li><a href="../../products/dynamic-pricing/">Dynamic pricing with DataWave</a></li>                                                                    <li><a href="../../products/scoring/">Scoring</a></li>                                                                    <li><a href="../../products/analytics/">Analytics</a></li>                                                                    <li><a href="../../products/campaign-manager/">Campaign Manager</a></li>                                                                    <li><a href="../../products/content-personalization/">Content personalization</a></li>                                                        </ul>
+                    </div>
+                </div>
+                <div class="footer__blocks footer__blocks-third">
+                    <div class="footer__block">
+                        <div class="footer__name">Industry solutions<svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd" d="M16.2071 9.79289C15.8166 9.40237 15.1834 9.40237 14.7929 9.79289L12 12.5858L9.20711 9.79289C8.81658 9.40237 8.18342 9.40237 7.79289 9.79289C7.40237 10.1834 7.40237 10.8166 7.79289 11.2071L11.2929 14.7071C11.6834 15.0976 12.3166 15.0976 12.7071 14.7071L16.2071 11.2071C16.5976 10.8166 16.5976 10.1834 16.2071 9.79289Z" fill="white" fill-opacity="0.7" fill-rule="evenodd"></path>
+                            </svg></div>
+                        <ul class="footer__nav">
+                            
+                                                                    <li><a href="../../solutions/horeca/">HoReCa</a></li>                                                                    <li><a href="../../solutions/fmcg/">FMCG sector</a></li>                                                                    <li><a href="../../solutions/real-estate/">Real estate</a></li>                                                                    <li><a href="../../solutions/retail/">Retail</a></li>                                                                    <li><a href="../../solutions/telecom/">Telecom</a></li>                                                                    <li><a href="../../solutions/pharma/">Pharmaceuticals</a></li>                                                                    <li><a href="../../solutions/finance-2/">Financial sector</a></li>                                                                    <li><a href="../../solutions/finance/">Financial sector</a></li>                                                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="footer__nav-new footer__nav-mobile" id="menu-menyu-podval-1"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"><a href="../../about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277"><a href="../../blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278"><a href="../../contacts/">Contacts</a></li>
+</ul>        </div>
+        <ul class="footer__list" id="menu-proizvolnye-ssylki-v-podvale"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-803 current-menu-item" id="menu-item-803"><a href="../../docs/installation/" aria-current="page">Installation procedure for Data Wave CDP</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801" id="menu-item-801"><a href="../../docs/functional-characteristics/">Description of functional characteristics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800" id="menu-item-800"><a href="../../docs/operation/">Information required to operate the software</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802" id="menu-item-802"><a href="../../privacy-policy/">Personal data processing policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848" id="menu-item-848"><a href="../../it-activities/">Information on the organization's IT activities</a></li>
+</ul>        <div class="footer__from-mobile">
+            <p>Stay up to date with Datawave news</p>
+            <div class="footer__form-mobile-item">
+                
+<div class="wpcf7 no-js" data-wpcf7-id="149" dir="ltr" id="wpcf7-f149-o102" lang="en">
+<div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p> <ul></ul></div>
+<form action="#" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
+<div style="display: none;">
+<input name="_wpcf7" type="hidden" value="149"/>
+<input name="_wpcf7_version" type="hidden" value="6.0.4"/>
+<input name="_wpcf7_locale" type="hidden" value="ru_RU"/>
+<input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f149-o102"/>
+<input name="_wpcf7_container_post" type="hidden" value="0"/>
+<input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+</div>
+<div class="footer__input">
+	<p><span class="wpcf7-form-control-wrap" data-name="email-720"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" maxlength="400" name="email-720" placeholder="Enter your email" size="40" type="email" value=""/></span>
+	</p>
+</div>
+<div class="footer__btn">
+	<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send"/>
+	</p>
+</div><div aria-hidden="true" class="wpcf7-response-output"></div>
+</form>
+</div>
+            </div>
+        </div>
+        <div class="footer__end">
+            <div class="footer__politic">
+                © 2025, «DataWave». All rights reserved. <a href="../../privacy-policy/">Privacy
+                    poilcy</a>
+            </div>
+            <div class="footer__socials">
+                            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal-dop" id="modal-dop" style="display: none">
+    <div class="modal-dop__items">
+        <div class="modal-dop__title">Additional DATAWAVE features</div>
+        <div class="modal-dop__items">
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Product customization</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__banner">The entire product is built on a microservice architecture</div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Adapting the product to your needs</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__banner">We prepare the product for your needs</div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Dedicated team</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__banner">We build a team for each project</div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Communication options</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__socials">
+                        <div class="modal-dop__socials-inner">
+                            <div class="modal-dop__socials-head">Messengers</div>
+                            <div class="modal-dop__social">
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" d="M16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32ZM16.6919 12.0074C15.2589 12.6034 12.3949 13.8371 8.09992 15.7083C7.40248 15.9856 7.03714 16.257 7.00388 16.5223C6.94767 16.9706 7.50915 17.1472 8.27374 17.3876C8.37774 17.4203 8.4855 17.4542 8.59598 17.4901C9.34822 17.7346 10.3601 18.0207 10.8862 18.0321C11.3633 18.0424 11.8959 17.8457 12.4839 17.4419C16.4968 14.7331 18.5683 13.3639 18.6983 13.3344C18.7901 13.3136 18.9172 13.2874 19.0034 13.3639C19.0895 13.4405 19.0811 13.5855 19.0719 13.6244C19.0163 13.8615 16.8123 15.9106 15.6717 16.971C15.3161 17.3015 15.0639 17.536 15.0124 17.5896C14.8969 17.7096 14.7791 17.823 14.666 17.9321C13.9672 18.6058 13.4431 19.111 14.695 19.936C15.2967 20.3325 15.7781 20.6603 16.2584 20.9874C16.7829 21.3446 17.306 21.7009 17.9829 22.1446C18.1554 22.2576 18.3201 22.375 18.4805 22.4894C19.0909 22.9246 19.6393 23.3155 20.3168 23.2532C20.7105 23.217 21.1172 22.8468 21.3237 21.7427C21.8118 19.1335 22.7712 13.4801 22.9929 11.1505C23.0123 10.9464 22.9879 10.6851 22.9683 10.5705C22.9486 10.4558 22.9076 10.2924 22.7586 10.1715C22.582 10.0283 22.3095 9.99805 22.1877 10.0001C21.6335 10.01 20.7834 10.3056 16.6919 12.0074Z" fill="#3FD0FF" fill-opacity="0.5" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <p>Telegram</p>
+                                </div>
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M27.6465 3.09612C26.8572 2.38992 23.7001 0.0636352 16.5966 0.0220943C16.5966 0.0220943 8.24692 -0.476401 4.17592 3.26228C1.89117 5.54703 1.10189 8.82876 1.01881 12.9413C0.935725 17.0539 0.811113 24.7389 8.24693 26.8575V30.0561C8.24693 30.0561 8.20538 31.3439 9.0362 31.5932C10.0747 31.9255 10.6563 30.9285 11.6533 29.89C12.1933 29.3084 12.941 28.4776 13.4811 27.8129C18.5491 28.2283 22.4539 27.2729 22.9109 27.1067C23.9494 26.7744 29.7236 26.0267 30.679 18.3416C31.676 10.3658 30.2636 5.33932 27.6465 3.09612ZM28.5189 17.7185C27.7296 24.1573 23.0355 24.5727 22.1631 24.822C21.7893 24.9466 18.3829 25.7774 14.0626 25.5282C14.0626 25.5282 10.864 29.3915 9.82548 30.43C9.65931 30.5962 9.49315 30.6377 9.36852 30.6377C9.20236 30.5962 9.16082 30.3885 9.16082 30.0977C9.16082 29.6823 9.20236 24.7805 9.20236 24.7805C2.92969 23.0357 3.30356 16.4723 3.3451 13.0244C3.42818 9.57649 4.0513 6.79325 5.96218 4.88237C9.41007 1.7668 16.5136 2.22376 16.5136 2.22376C22.4954 2.2653 25.3618 4.05155 26.0264 4.67466C28.1865 6.58554 29.3081 11.1135 28.5189 17.7185Z" fill="#3FD0FF" fill-opacity="0.5"></path>
+                                        <path d="M19.5032 12.7754C19.4201 11.1968 18.6308 10.3659 17.0938 10.2828" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M21.5833 13.4398C21.6248 11.9858 21.1679 10.7395 20.2955 9.78405C19.3815 8.78703 18.1353 8.24698 16.5566 8.12235" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M23.6587 14.2709C23.6587 11.7368 22.8694 9.74275 21.3739 8.28876C19.8783 6.83477 18.0089 6.08701 15.7656 6.08701" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M17.1769 18.1337C17.1769 18.1337 17.7585 18.1753 18.0493 17.8014L18.6309 17.0537C18.9216 16.6798 19.5863 16.4306 20.2925 16.8044C20.6664 17.0121 21.331 17.4275 21.7464 17.7599C22.2034 18.0922 23.1173 18.8399 23.1173 18.8399C23.5742 19.2138 23.6573 19.7538 23.3665 20.3354C23.0757 20.8754 22.6603 21.3739 22.1203 21.8309C21.7049 22.2047 21.2895 22.3709 20.8741 22.454H20.7079C20.5417 22.454 20.334 22.4124 20.1679 22.3709C19.5448 22.2047 18.5062 21.7478 16.72 20.7923C15.5984 20.1692 14.6429 19.5046 13.8537 18.8815C13.4383 18.5491 12.9813 18.1753 12.5659 17.7183L12.3997 17.5522C11.9428 17.0952 11.5689 16.6798 11.2366 16.2644C10.6135 15.4751 9.94881 14.5197 9.3257 13.3981C8.37026 11.6533 7.91331 10.6148 7.74715 9.95018C7.70561 9.78401 7.66406 9.61786 7.66406 9.41015V9.24398C7.7056 8.82857 7.91331 8.41316 8.28718 7.99775C8.74413 7.49926 9.24262 7.08385 9.78265 6.75153C10.3642 6.46074 10.9043 6.54382 11.2781 7.00077C11.2781 7.00077 12.0259 7.91468 12.3582 8.37163C12.649 8.78704 13.0644 9.45169 13.3136 9.82556C13.6875 10.4902 13.4382 11.1964 13.1059 11.4872L12.3582 12.0688C11.9843 12.3596 12.0259 12.9411 12.0259 12.9411C12.0259 12.9411 13.0644 17.0537 17.1769 18.1337Z" fill="#3FD0FF" fill-opacity="0.5"></path>
+                                    </svg>
+                                    <p>Viber</p>
+                                </div>
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_989_12810)">
+                                            <path clip-rule="evenodd" d="M28.6693 26.0333C30.7013 24.56 32 22.3827 32 19.9613C32 15.5267 27.684 11.9307 22.3613 11.9307C17.0387 11.9307 12.7227 15.5267 12.7227 19.9613C12.7227 24.3973 17.0387 27.9933 22.3613 27.9933C23.4613 27.9933 24.5227 27.8373 25.508 27.5533L25.7907 27.5107C25.976 27.5107 26.144 27.568 26.3027 27.6587L28.4133 28.8773L28.5987 28.9373C28.776 28.9373 28.92 28.7933 28.92 28.616L28.868 28.3813L28.4333 26.7613L28.4 26.556C28.4 26.34 28.5067 26.1493 28.6693 26.0333ZM11.5667 3.06267C5.17867 3.06267 0 7.37733 0 12.7013C0 15.6053 1.55733 18.22 3.996 19.9867C4.192 20.1253 4.32 20.3547 4.32 20.6147L4.28 20.86L3.75867 22.804L3.696 23.0853C3.696 23.2987 3.86933 23.472 4.08133 23.472L4.30533 23.4L6.83733 21.9373C7.02667 21.828 7.228 21.76 7.45067 21.76L7.79067 21.8107C8.972 22.1507 10.2467 22.34 11.5667 22.34L12.2013 22.324C11.9507 21.572 11.8133 20.78 11.8133 19.9627C11.8133 15.108 16.536 11.172 22.3613 11.172L22.9893 11.188C22.1187 6.584 17.336 3.06267 11.5667 3.06267ZM19.148 18.6773C18.4387 18.6773 17.864 18.1013 17.864 17.392C17.864 16.6813 18.4387 16.1067 19.148 16.1067C19.8587 16.1067 20.4333 16.6813 20.4333 17.392C20.4333 18.1013 19.8587 18.6773 19.148 18.6773ZM25.5747 18.6773C24.864 18.6773 24.2893 18.1013 24.2893 17.392C24.2893 16.6813 24.864 16.1067 25.5747 16.1067C26.284 16.1067 26.8587 16.6813 26.8587 17.392C26.8587 18.1013 26.284 18.6773 25.5747 18.6773ZM7.71067 11.1587C6.85867 11.1587 6.16933 10.468 6.16933 9.61733C6.16933 8.76533 6.85867 8.07467 7.71067 8.07467C8.56267 8.07467 9.25333 8.76533 9.25333 9.61733C9.25333 10.468 8.56267 11.1587 7.71067 11.1587ZM15.4213 11.1587C14.5693 11.1587 13.88 10.468 13.88 9.61733C13.88 8.76533 14.5693 8.07467 15.4213 8.07467C16.2733 8.07467 16.964 8.76533 16.964 9.61733C16.964 10.468 16.2733 11.1587 15.4213 11.1587Z" fill="#3FD0FF" fill-opacity="0.5" fill-rule="evenodd"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_989_12810">
+                                                <rect fill="white" height="32" width="32"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>WeChat</p>
+                                </div>
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" d="M12.6 21.7C13.6 22.3 14.8 22.6 16 22.6C19.7 22.6 22.6 19.6 22.6 16.1C22.6 14.3 22 12.7 20.7 11.4C19.4 10.2 17.8 9.5 16 9.5C12.4 9.5 9.39999 12.5 9.39999 16.1C9.39999 17.3 9.7 18.5 10.4 19.6L10.6 19.9L9.89999 22.3L12.4 21.6L12.6 21.7ZM18.2 17C18.4 17 19.4 17.5 19.6 17.6C19.6311 17.6156 19.6623 17.6287 19.6931 17.6417C19.8599 17.7121 20.0156 17.7779 20.1 18.2C20.2 18.2 20.2 18.6 20 19.1C19.9 19.5 19.1 20 18.7 20C18.6322 20 18.5673 20.0057 18.498 20.0119C18.1582 20.0419 17.712 20.0814 16.3 19.5C14.5475 18.799 13.3325 17.0999 12.9913 16.6228C12.9431 16.5554 12.9124 16.5124 12.9 16.5C12.883 16.466 12.8485 16.4116 12.8031 16.3399C12.5819 15.9906 12.1 15.2297 12.1 14.4C12.1 13.4 12.6 12.9 12.8 12.7C13 12.5 13.2 12.5 13.3 12.5H13.7C13.8 12.5 14 12.5 14.1 12.8C14.3 13.2 14.7 14.2 14.7 14.3C14.7 14.3333 14.7111 14.3667 14.7222 14.4C14.7445 14.4667 14.7667 14.5333 14.7 14.6C14.65 14.65 14.625 14.7 14.6 14.75C14.575 14.8 14.55 14.85 14.5 14.9L14.2 15.2C14.1 15.3 14 15.4 14.1 15.6C14.2 15.8 14.6 16.5 15.2 17C15.8751 17.5907 16.4078 17.8254 16.6778 17.9443C16.7278 17.9663 16.7688 17.9844 16.8 18C17 18 17.1 18 17.2 17.9C17.25 17.8 17.375 17.65 17.5 17.5C17.625 17.35 17.75 17.2 17.8 17.1C17.9 16.9 18 16.9 18.2 17Z" fill="#3FD0FF" fill-opacity="0.5" fill-rule="evenodd"></path>
+                                        <path clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM16 8C18.1 8 20.1 8.8 21.6 10.3C23.1 11.8 24 13.8 24 15.9C24 20.3 20.4 23.9 16 23.9C14.7 23.9 13.4 23.5 12.2 22.9L8 24L9.10001 20C8.40001 18.8 8 17.4 8 16C8 11.6 11.6 8 16 8Z" fill="#3FD0FF" fill-opacity="0.5" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <p>Whatsapp</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-dop__socials-inner">
+                            <div class="modal-dop__socials-head">Social networks</div>
+                            <div class="modal-dop__social">
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" d="M16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32ZM16.6919 12.0074C15.2589 12.6034 12.3949 13.8371 8.09992 15.7083C7.40248 15.9856 7.03714 16.257 7.00388 16.5223C6.94767 16.9706 7.50915 17.1472 8.27374 17.3876C8.37774 17.4203 8.4855 17.4542 8.59598 17.4901C9.34822 17.7346 10.3601 18.0207 10.8862 18.0321C11.3633 18.0424 11.8959 17.8457 12.4839 17.4419C16.4968 14.7331 18.5683 13.3639 18.6983 13.3344C18.7901 13.3136 18.9172 13.2874 19.0034 13.3639C19.0895 13.4405 19.0811 13.5855 19.0719 13.6244C19.0163 13.8615 16.8123 15.9106 15.6717 16.971C15.3161 17.3015 15.0639 17.536 15.0124 17.5896C14.8969 17.7096 14.7791 17.823 14.666 17.9321C13.9672 18.6058 13.4431 19.111 14.695 19.936C15.2967 20.3325 15.7781 20.6603 16.2584 20.9874C16.7829 21.3446 17.306 21.7009 17.9829 22.1446C18.1554 22.2576 18.3201 22.375 18.4805 22.4894C19.0909 22.9246 19.6393 23.3155 20.3168 23.2532C20.7105 23.217 21.1172 22.8468 21.3237 21.7427C21.8118 19.1335 22.7712 13.4801 22.9929 11.1505C23.0123 10.9464 22.9879 10.6851 22.9683 10.5705C22.9486 10.4558 22.9076 10.2924 22.7586 10.1715C22.582 10.0283 22.3095 9.99805 22.1877 10.0001C21.6335 10.01 20.7834 10.3056 16.6919 12.0074Z" fill="#3FD0FF" fill-opacity="0.5" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <p>VK</p>
+                                </div>
+                                <div class="modal-dop__social-item">
+                                    <svg aria-hidden="true" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M27.6465 3.09612C26.8572 2.38992 23.7001 0.0636352 16.5966 0.0220943C16.5966 0.0220943 8.24692 -0.476401 4.17592 3.26228C1.89117 5.54703 1.10189 8.82876 1.01881 12.9413C0.935725 17.0539 0.811113 24.7389 8.24693 26.8575V30.0561C8.24693 30.0561 8.20538 31.3439 9.0362 31.5932C10.0747 31.9255 10.6563 30.9285 11.6533 29.89C12.1933 29.3084 12.941 28.4776 13.4811 27.8129C18.5491 28.2283 22.4539 27.2729 22.9109 27.1067C23.9494 26.7744 29.7236 26.0267 30.679 18.3416C31.676 10.3658 30.2636 5.33932 27.6465 3.09612ZM28.5189 17.7185C27.7296 24.1573 23.0355 24.5727 22.1631 24.822C21.7893 24.9466 18.3829 25.7774 14.0626 25.5282C14.0626 25.5282 10.864 29.3915 9.82548 30.43C9.65931 30.5962 9.49315 30.6377 9.36852 30.6377C9.20236 30.5962 9.16082 30.3885 9.16082 30.0977C9.16082 29.6823 9.20236 24.7805 9.20236 24.7805C2.92969 23.0357 3.30356 16.4723 3.3451 13.0244C3.42818 9.57649 4.0513 6.79325 5.96218 4.88237C9.41007 1.7668 16.5136 2.22376 16.5136 2.22376C22.4954 2.2653 25.3618 4.05155 26.0264 4.67466C28.1865 6.58554 29.3081 11.1135 28.5189 17.7185Z" fill="#3FD0FF" fill-opacity="0.5"></path>
+                                        <path d="M19.5032 12.7754C19.4201 11.1968 18.6308 10.3659 17.0938 10.2828" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M21.5833 13.4398C21.6248 11.9858 21.1679 10.7395 20.2955 9.78405C19.3815 8.78703 18.1353 8.24698 16.5566 8.12235" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M23.6587 14.2709C23.6587 11.7368 22.8694 9.74275 21.3739 8.28876C19.8783 6.83477 18.0089 6.08701 15.7656 6.08701" stroke="#3FD0FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5"></path>
+                                        <path d="M17.1769 18.1337C17.1769 18.1337 17.7585 18.1753 18.0493 17.8014L18.6309 17.0537C18.9216 16.6798 19.5863 16.4306 20.2925 16.8044C20.6664 17.0121 21.331 17.4275 21.7464 17.7599C22.2034 18.0922 23.1173 18.8399 23.1173 18.8399C23.5742 19.2138 23.6573 19.7538 23.3665 20.3354C23.0757 20.8754 22.6603 21.3739 22.1203 21.8309C21.7049 22.2047 21.2895 22.3709 20.8741 22.454H20.7079C20.5417 22.454 20.334 22.4124 20.1679 22.3709C19.5448 22.2047 18.5062 21.7478 16.72 20.7923C15.5984 20.1692 14.6429 19.5046 13.8537 18.8815C13.4383 18.5491 12.9813 18.1753 12.5659 17.7183L12.3997 17.5522C11.9428 17.0952 11.5689 16.6798 11.2366 16.2644C10.6135 15.4751 9.94881 14.5197 9.3257 13.3981C8.37026 11.6533 7.91331 10.6148 7.74715 9.95018C7.70561 9.78401 7.66406 9.61786 7.66406 9.41015V9.24398C7.7056 8.82857 7.91331 8.41316 8.28718 7.99775C8.74413 7.49926 9.24262 7.08385 9.78265 6.75153C10.3642 6.46074 10.9043 6.54382 11.2781 7.00077C11.2781 7.00077 12.0259 7.91468 12.3582 8.37163C12.649 8.78704 13.0644 9.45169 13.3136 9.82556C13.6875 10.4902 13.4382 11.1964 13.1059 11.4872L12.3582 12.0688C11.9843 12.3596 12.0259 12.9411 12.0259 12.9411C12.0259 12.9411 13.0644 17.0537 17.1769 18.1337Z" fill="#3FD0FF" fill-opacity="0.5"></path>
+                                    </svg>
+                                    <p>OK</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <div class="modal-dop__listing-head">Subscription messages</div>
+                            <ul class="modal-dop__listing-ul">
+                                <li>Web push</li>
+                                <li>App push</li>
+                            </ul>
+                        </div>
+                        <div class="modal-dop__listing-item">
+                            <div class="modal-dop__listing-head">Classic channels</div>
+                            <ul class="modal-dop__listing-ul">
+                                <li>SMS messages</li>
+                                <li>Email messages</li>
+                            </ul>
+                        </div>
+                        <div class="modal-dop__listing-item">
+                            <div class="modal-dop__listing-head">Advertising communications</div>
+                            <ul class="modal-dop__listing-ul">
+                                <li>Google ads</li>
+                                <li>Yandex Direct</li>
+                                <li>Facebook ads</li>
+                                <li>MyTarget</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Behavior management on the website and in the mobile app</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li><span>Banner management and builder</span></li>
+                                <li><span>Onboarding management</span></li>
+                                <li><span>Promotional offer management and builder</span></li>
+                                <li><span>Display management:</span></li>
+                            </ul>
+                        </div>
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li>Articles</li>
+                                <li>Reviews</li>
+                                <li>Products</li>
+                                <li>Surveys</li>
+                                <li>Ratings</li>
+                            </ul>
+                        </div>
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li><span>User tracking</span></li>
+                                <li>Closing sections</li>
+                                <li>Redirects from sections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>ML training and analytics system</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li>System for building analytical data marts</li>
+                                <li>System for building ML models</li>
+                                <li>Data visualization system</li>
+                                <li>Customer journey visualization system</li>
+                                <li>Building the best path for each customer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Recommendations</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <div class="modal-dop__listing-head">Recommendation system for the website, the mobile app and communication channels</div>
+                            <ul class="modal-dop__listing-ul">
+                                <li>Products</li>
+                                <li>Articles</li>
+                                <li>Reviews</li>
+                                <li>Banners</li>
+                                <li>Promotional offers</li>
+                                <li>Onboarding</li>
+                            </ul>
+                        </div>
+                        <div class="modal-dop__listing-item">
+                            <div class="modal-dop__listing-head">Recommendations in personalization:</div>
+                            <ul class="modal-dop__listing-ul">
+                                <li>Offers</li>
+                                <li>Discount size</li>
+                                <li>Number of bonus points awarded</li>
+                                <li>Promotional offer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Automation for business goals</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li>ROI</li>
+                                <li>Average check</li>
+                                <li>Purchase frequency</li>
+                                <li>Larger shopping basket</li>
+                                <li>User retention</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>User data enrichment</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li>From historical data</li>
+                                <li>From DMP systems</li>
+                                <li>From partner networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-dop__item">
+                <div class="modal-dop__header">
+                    <div class="modal-dop__head"><span>Visual builder</span></div>
+                    <div class="modal-dop__plus">
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3L12 21" stroke="url(#paint0_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <path d="M3 12L21 12" stroke="url(#paint1_linear_989_13271)" stroke-linecap="round" stroke-width="2"></path>
+                            <defs>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_989_13271" x1="12" x2="13.3853" y1="3" y2="3.0297">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_989_13271" x1="3" x2="3.0297" y1="12" y2="10.6147">
+                                    <stop stop-color="#3FD0FF"></stop>
+                                    <stop offset="1" stop-color="#2366F2"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12L21 12" opacity="0.4" stroke="#080719" stroke-linecap="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-dop__body">
+                    <div class="modal-dop__listing">
+                        <div class="modal-dop__listing-item">
+                            <ul class="modal-dop__listing-ul">
+                                <li>Banners</li>
+                                <li>Messages in communication channels</li>
+                                <li>ML models</li>
+                                <li>Decision-making systems</li>
+                                <li>User clustering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dop__btns"><a class="modal-dop__btn" data-fancybox="" href="#modal-demo">Book a demo</a> <a class="modal-dop__btn" data-fancybox="" href="#modal-call"><span>Request a callback</span></a></div>
+        <div class="modal-dop__exit" data-fancybox-close="">
+            <svg aria-hidden="true" fill="none" height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_b_989_13107)">
+                    <rect fill="#060512" fill-opacity="0.5" height="40" rx="8" width="40"></rect>
+                    <path d="M12 28L28 12M28 28L12 12" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+                    <rect height="39" rx="7.5" stroke="white" stroke-opacity="0.1" width="39" x="0.5" y="0.5"></rect>
+                </g>
+                <defs>
+                    <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="120" id="filter0_b_989_13107" width="120" x="-40" y="-40">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="20"></feGaussianBlur>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_989_13107"></feComposite>
+                        <feBlend in="SourceGraphic" in2="effect1_backgroundBlur_989_13107" mode="normal" result="shape"></feBlend>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+
+</div>
+<div class="modal-demo" id="modal-demo" style="display: none">
+    <div class="action__form element-show">
+        <div class="wpcf7 no-js" data-wpcf7-id="204" dir="ltr" id="wpcf7-f204-o103" lang="en"><form action="#" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate"><div style="display: none;"><input name="_wpcf7" type="hidden" value="204"/><input name="_wpcf7_version" type="hidden" value="6.0.4"/><input name="_wpcf7_locale" type="hidden" value="ru_RU"/><input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f204-o103"/><input name="_wpcf7_container_post" type="hidden" value="0"/><input name="_wpcf7_posted_data_hash" type="hidden" value=""/></div><input class="demo-follows" name="text-144" type="hidden" value=""/>
+            <div class="action__form-title">Book a demonstration</div>
+            <div class="action__form-inputs">
+                <div class="demo__input"><span class="wpcf7-form-control-wrap" data-name="text-35"><input aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" name="text-35" placeholder="Your name" type="text"/></span></div>
+                <div class="demo__input"><span class="wpcf7-form-control-wrap" data-name="text-36"><input class="wpcf7-form-control wpcf7-text" name="text-36" placeholder="Your company" type="text"/></span></div>
+                <div class="demo__input"><span class="wpcf7-form-control-wrap" data-name="email-52"><input class="wpcf7-form-control wpcf7-email" name="email-52" placeholder="Email" type="email"/></span></div>
+                <div class="demo__input"><span class="wpcf7-form-control-wrap" data-name="tel-27"><input aria-required="true" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required" name="tel-27" placeholder="+7 (999) 999 99 99" type="tel"/></span></div>
+            </div>
+            <div class="action__form-name">How did you hear about DataWave?*</div>
+            <span class="wpcf7-form-control-wrap" data-name="textarea-454"><textarea class="wpcf7-form-control wpcf7-textarea" name="textarea-454" placeholder="*Enter text (optional)"></textarea></span><label class="checkbox-politic"> <span class="checkbox-politic__inner"> <input class="agreement" type="checkbox"/> <span></span> </span> <span class="checkbox-politic__text">Keep me informed about Datawave special offers, updates and news.</span> </label><div class="action__form-btn">
+                <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send"/>
+            </div>
+            <div class="action__form-end">By clicking “Send”, you consent to the processing of your personal data and accept the privacy policy</div>
+        <div aria-hidden="true" class="wpcf7-response-output"></div></form></div>
+        <div class="modal-dop__exit" data-fancybox-close=""><img alt="" src="../../assets/theme/images/close-modal.svg"/></div>
+    </div>
+</div>
+<div class="modal-news" id="modal-news" style="display: none">
+    <div class="modal-news__title">Subscribe to our newsletter</div>
+    <div class="modal-news__text">Benefit from the knowledge we have gained as market leaders in CDP and omnichannel marketing automation.</div>
+    <div class="modal-news__img">
+    <img alt="" src="../../assets/theme/images/modal-icon.png"/>
+</div>
+    <form action="#">
+        <div class="modal-news__input"><input placeholder="Email address" type="text"/></div>
+        <div class="modal-news__btn"><input type="submit" value="Subscribe"/></div>
+    </form>
+    <div class="modal-news__end">By clicking “Subscribe”, you consent to the processing of your personal data and accept the privacy policy</div>
+    <div class="modal-dop__exit" data-fancybox-close=""><img alt="" src="../../assets/theme/images/close-modal.svg"/></div>
+</div>
+<div class="modal-demo modal-call" id="modal-call" style="display: none">
+    <div class="action__form element-show">
+        
+<div class="wpcf7 no-js" data-wpcf7-id="349" dir="ltr" id="wpcf7-f349-o104" lang="en">
+<div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p> <ul></ul></div>
+<form action="#" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
+<div style="display: none;">
+<input name="_wpcf7" type="hidden" value="349"/>
+<input name="_wpcf7_version" type="hidden" value="6.0.4"/>
+<input name="_wpcf7_locale" type="hidden" value="ru_RU"/>
+<input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f349-o104"/>
+<input name="_wpcf7_container_post" type="hidden" value="0"/>
+<input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+</div>
+<div class="action__form-title">
+	<p>Callback request</p>
+</div>
+<div class="action__form-inputs">
+	<div class="demo__input">
+		<p><span class="wpcf7-form-control-wrap" data-name="text-60"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" maxlength="400" name="text-60" placeholder="Your name" size="40" type="text" value=""/></span>
+		</p>
+	</div>
+	<div class="demo__input">
+		<p><span class="wpcf7-form-control-wrap" data-name="tel-179"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" maxlength="400" name="tel-179" placeholder="+7 (999) 999 99 99" size="40" type="tel" value=""/></span>
+		</p>
+	</div>
+</div>
+<div class="action__form-name">
+	<p>Your company's industry</p>
+</div>
+<p><span class="wpcf7-form-control-wrap" data-name="menu-523"><select aria-invalid="false" class="wpcf7-form-control wpcf7-select demo__select" name="menu-523"><option value="">Choose an option</option><option value="Финансовый сектор">Financial sector</option><option value="Ритейл">Retail</option><option value="Фармация">Pharmaceuticals</option><option value="FMCG">FMCG</option><option value="Недвижимость">Real estate</option><option value="Другое">Other</option></select></span>
+</p>
+<div class="action__form-btn">
+	<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send"/>
+	</p>
+</div>
+<p class="text-privacy">By clicking “Send”, you consent to the processing of your personal data and accept the <a href="../../privacy-policy/">privacy policy</a></p><div aria-hidden="true" class="wpcf7-response-output"></div>
+</form>
+</div>
+        <div class="modal-dop__exit" data-fancybox-close=""><img alt="" src="../../assets/theme/images/close-modal.svg"/></div>
+    </div>
+</div>
+</div>
+<script src="../../assets/theme/libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="../../assets/theme/libs/fancybox/jquery.fancybox.min.js"></script>
+<script src="../../assets/theme/libs/select/select2.min.js"></script>
+<script src="../../assets/theme/libs/slick/slick.min.js"></script>
+<script src="../../assets/theme/js/main.js"></script>
+<script src="../../assets/js/forms.js"></script>
+</body>
+</html>

@@ -1,68 +1,97 @@
 # Translation notes
 
-## How the English text was produced
+## How the English site was made
 
-data-wave.ru could not be opened from the environment this site was built in: the network policy blocked the domain. The English copy was therefore written from what search engines have indexed for data-wave.ru (page titles, descriptions and text excerpts), not from a line-by-line reading of the live pages.
+- On September 25, 2026, all 30 public pages of data-wave.ru were downloaded with their styles, scripts, fonts and images.
+- The shared header, footer and pop-ups were separated from the page content. Every piece of Russian text was then extracted: 1,154 unique strings, about 82,000 characters.
+- Each string was translated into US English using one glossary. Style: no em dashes and no serial comma.
+- Inline markup (highlighted words, links, line breaks) was carried through with placeholders. The English sits in exactly the same HTML as the Russian.
+- Automated checks confirm there is no Russian left on the pages, every internal link and anchor resolves and no page scrolls sideways.
+- Each page was compared with the original at desktop and phone width: page heights are within a few percent of the Russian.
 
-What that means in practice:
+Every string is in [translation/ru-en.csv](translation/ru-en.csv) (page, Russian, English), so a Russian speaker can review the translation in a spreadsheet. `<g1>…</g1>` and `<x1/>` in that file mark where inline markup sits.
 
-- Product claims, figures, channel lists, contacts and quotes come from data-wave.ru as indexed.
-- Section headings, linking sentences, button labels, form labels and the small "Illustration" mockups were written for the English layout. They are not translations.
-- Some Russian pages were only partly visible. Those English pages are shorter than their originals or are summaries that link to the Russian text.
-- The visual design, logo and imagery of the Russian site were not available. The English site uses its own design and a placeholder logo.
+## Deliberate differences from the Russian site
 
-A final line-by-line check against the Russian pages is still needed before publishing.
+1. **Header labels are shorter:** "About", "Solutions" and "Request a call". The literal translations ("About us", "Industry solutions", "Request a callback") wrapped onto two lines in the header. The footer keeps the full names.
+2. **An `RU` item ends the main menu.** It links to the same page on data-wave.ru. Each page also declares its Russian twin with `hreflang`.
+3. **The "Book a demo" pop-up now sends requests.** On data-wave.ru this pop-up opens from 11 buttons, but its form has no field names and posts to `#`, so it sends nothing. The English pop-up uses the fields of Contact Form 7 form 204, the working "Book a demonstration" form on the About page. Its newsletter checkbox is optional; the Russian one is marked required but was never submitted anyway.
+4. **Forms validate and answer in English.** `site/assets/js/forms.js` replaces the Contact Form 7 plugin script and posts to the same Contact Form 7 forms on data-wave.ru. See the README.
+5. **Blog dates read "Mar 10, 2025"** instead of "10.03.2025".
+6. **Text typed in capitals stays in capitals**, so headings keep their look whatever the CSS does.
+7. **The theme script (`site/assets/theme/js/main.js`) is an English copy.** Its Russian strings are translated: "Show more"/"Show less", the dropdown placeholder and the newsletter flag sent with demo requests ("Wants the newsletter" / "Does not want the newsletter"). It also highlights the current post in the blog sidebar with relative links.
+8. **Obvious typos in the Russian were translated as intended.** The list is below.
 
-## Coverage by page
+## Not translated
 
-| English page | Russian source | Coverage |
-| --- | --- | --- |
-| Home | `/` | Main messages, modules, results, channels, ML, industries. Full page structure unknown. |
-| About | `/o-nas/` | Platform description, approach, results. "Project team" and "Partners" sections not reproduced (content not available). |
-| Analytics | `/products/uznajte-bolsheo-svoih-klientah/` | Main text. |
-| Content personalization | `/products/unikalnyj-kontent-dlya-kazhdogo-polzovatelya/` | Main text. |
-| Campaign Manager | products menu, home page | Built from short descriptions; the Russian site may have a fuller page. |
-| Scoring | products menu, home page, `/doc/` | Built from short descriptions. |
-| Dynamic pricing | products menu, home page | Built from short descriptions. |
-| Solutions | solutions menu, home page | FMCG, real estate and retail have real content. HoReCa, telecom, pharma and financial services have one line each. |
-| FMCG | `/solutions/fmcg/` | Challenge, objectives, solution, results. |
-| Etalon case study | `/blog/client_case_etalon/` | English summary with a link to the full Russian case. |
-| Website personalization release | `/blog/release_pers/` | Full translation of the announcement text. Publication date unknown, so none is shown. |
-| Documentation | `/doc/`, `/poryadok-ustanovki-resheniya-data-wave-cdp/`, `/informacziya-neobhodimaya-dlya-ekspluataczii-programmnogo-obespecheniya/` | Summaries with links to the Russian documents. |
-| Contacts | site footer | Phone, email, address. |
+- **Text inside images.**
+  - Product screenshots and interface mockups on the product and solution pages show the Russian interface. Examples: the HoReCa loyalty-level cards and the automation flow diagrams.
+  - The Etalon case study's CJM board and automation diagram.
+  - Blog cover images, which carry Russian titles.
+  - The phone mockup in the "Datawave blog" block on the Contacts page.
+  - The thumbnail of the About page video.
 
-## Check before publishing
+  English versions of these images need to be exported from the original design files.
+- **The two videos are in Russian.** They are too large for the repository (174 MB and 25 MB), so the pages play them from data-wave.ru.
+- **Dropdown values.** Labels are English, but the values sent with a form stay Russian ("Ритейл"), because Contact Form 7 rejects unknown values.
+- **Pages not linked from the site's navigation:**
+  - `/team/*` and `/cases/*`: the About page shows this content inline.
+  - `/informacziya-o-deyatelnosti-osushhestvlyaemoj-organizacziej-v-oblasti-it-2/`
+  - The default "Привет, мир!" post.
+  - Blog category archives (the blog page filters categories with tabs).
 
-1. **Figures.** Home and About: +32% sales conversion, +50% customer loyalty, +30% basket assortment. FMCG: +30% consumption frequency, +20% basket size, +5% new users, -40% time to first purchase. Scoring: +5% users with an average check of RUB 5,000, -40% time to first purchase. Confirm each number and whether "basket assortment" is the right English for "ассортимент корзины".
-2. **Contacts.** Phone +7 495 256-89-90, email info@datawave.ru (the email domain is datawave.ru, not data-wave.ru), office at 26 Malaya Bronnaya St., Bldg. 2, Moscow.
-3. **Russian Software Registry.** The site says Data Wave CDP is listed. Consider adding the registry entry number. Also decide whether this belongs so prominently on an English site.
-4. **Brand spelling.** The Russian site mixes Data Wave, DataWave, DATAWAVE and Datawave. The English site uses "Data Wave" for the company and platform, "Data Wave CDP" for the registered product and "Data Wave RTDM" for dynamic pricing.
-5. **RTDM** is expanded as "real-time decision management". Confirm.
-6. **Etalon.** Confirm the client name may be used in English materials and the date (March 10, 2025).
-7. **Missing content** to add if it exists in Russian: project team, partners, full product pages for Campaign Manager, Scoring and Dynamic pricing, full industry pages, newsletter subscription.
-8. **Legal.** The demo form asks for consent to personal data processing but there is no English privacy policy to link to. Add one (or link the Russian policy) and the legal entity details for the footer.
-9. **Visuals.** Replace the placeholder logo in `src/layout.html` and `src/assets/img/favicon.svg` with the official one. Replace the "Illustration" mockups with real product screenshots. Add an Open Graph image for link previews.
-10. **SEO.** After publishing, add `<link rel="alternate" hreflang="en" href="...">` to the matching Russian pages so search engines pair the two versions. Then set `SITE_URL` in `build.py`.
+## Decide or check before publishing
+
+1. **Privacy policy.**
+   - The English policy translates the Russian one. It covers visitors of https://data-wave.ru only. Clause 14.3 links to the Russian policy. Decide whether it should name the English site's address.
+   - The policy gives 30 days to answer Roskomnadzor. Since the September 2022 amendments to Federal Law 152-FZ the deadline is 10 business days, so a lawyer should check it (in the Russian original too).
+2. **Where leads go.** English form submissions arrive through the same Contact Form 7 forms, so the notification emails look like Russian-site leads, with English answers and Russian dropdown values. If that is not wanted, point `window.DW_FORMS_API` elsewhere (see the README).
+3. **Phone number.** Neither site shows one: the Russian footer has an empty `tel:` link and the Contacts page has a "Phone" block without a number.
+4. **Names and spellings to confirm.**
+   - "Vasta Discovery" for «Васта Дискавери».
+   - "Andrey Bushnin" and the other team members' transliterations.
+   - "Zavidovo", "Etalon", "Polymatica" and "First Bit".
+5. **Uncertain wording in the source**, translated literally:
+   - "Fewer fly-by-night companies" (the 7% figure on the Campaign Manager page) may be a typo for campaigns.
+   - "Points expiry reminder" is the example SMS in the Scoring page mockup.
+6. **Brand spelling.** The Russian site mixes Datawave, DataWave, DATAWAVE and Data Wave. The translation keeps whatever each sentence used.
+
+## Problems found on the Russian site
+
+Worth fixing on data-wave.ru as well:
+
+- **Broken "Book a demo" pop-up (#modal-demo):** no field names and `action="#"`, so nothing is sent. The pop-up's consent line also says "Получить" while its button says "Отправить".
+- **Two "Финансовый сектор" pages** with different content (`/solutions/finansovyj-sektor/` and `-2/`), both linked from the home page and footer.
+- **About page product cards are shifted.** The "Скоринг" card describes dynamic pricing; the Campaign Manager card repeats the Content personalization text.
+- **About page team card:** the first name reads "Команда проекта / Андрей Бушнин", with the section title leaked into the name field.
+- **Words typed with Cyrillic look-alike letters:** "В2В/В2С", "MсKinsey", "А/В", "eх.".
+- **Typos:**
+  - "Сознание" for "Создание", "компаний" for "кампаний", "DMB" for "DMP" and "динистором".
+  - "работаты", "гипермаркеторв", "преобретению", "наружняя", "в ручную", "Частно".
+  - "Крупнейшей", "цена привлечение" and "компании компания".
+  - "КОМПЛЕКСНОЕ РЕШЕНИ" (cut off), "Управление обображением" and "микросервесной".
+  - "look a like".
+- **Documentation pages:**
+  - The title fragment "программного обеспечения “ДатаВейв” и информация" is cut off.
+  - "Модуль: Интеграции" sits inside the Analytics feature list.
+  - "(далее - “разработчик”, “CDP”)" names the software "developer".
+- **Privacy policy:** the regulator deadline noted above, a stray period in the law's date and a few grammar slips.
 
 ## Glossary
 
-Terms used consistently across the English site.
-
 | Russian | English |
 | --- | --- |
-| комплексная автоматизация маркетинга | comprehensive marketing automation |
-| безграничный рост бизнеса | limitless business growth |
-| клиентоориентированная платформа | customer-centric platform |
-| многоканальное проведение кампаний | multichannel campaign execution |
+| Сервисы для управления клиентскими данными | Customer data management services |
+| Комплексная автоматизация маркетинга для безграничного роста бизнеса | Comprehensive marketing automation for limitless business growth |
+| Запись на демо | Book a demo |
+| Обратный звонок | Request a call (header), Callback request (form) |
+| Отраслевые решения | Industry solutions (Solutions in the header) |
+| Менеджер кампаний / Campaign-менеджер | Campaign Manager |
+| Персонализация контента | Content personalization |
+| Динамическое ценообразование с DataWave | Dynamic pricing with DataWave |
+| Процессинг программ лояльности | Loyalty program processing |
 | единый профиль клиента | single customer profile |
-| сегментация в реальном времени | real-time segmentation |
-| обогащение данных | data enrichment |
-| персонализация контента | content personalization |
-| персонификация элементов сайта | website element personalization |
-| no-code / zero-code конструктор | no-code / zero-code builder |
-| триггерные цепочки | trigger chains |
-| динамическое ценообразование | dynamic pricing |
-| скоринг, «теплота» лида | scoring, lead warmth |
-| демо-показ | demo |
-| кейс | case study |
-| реестр российского ПО | Russian Software Registry |
+| средний чек / объем продаж / возвращаемость | average check / sales volume / return rate |
+| реестр отечественного ПО | Russian Software Registry |
+| ООО «ДАТА ВЕЙВ» | DATA WAVE LLC |
+| Оператор, субъект персональных данных | the Operator, personal data subject |

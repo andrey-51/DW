@@ -1,35 +1,37 @@
 #!/usr/bin/env python3
-"""Build the English Data Wave site from src/ into site/.
+"""Build the English Data Wave site: render src/ pages into site/.
 
 Usage:
-    python3 build.py            build site/ and check internal links
+    python3 build.py            build the pages and check every internal link
     python3 build.py --serve    build, then serve site/ on http://localhost:8000
 
-Pages live in src/pages/. Each page starts with a front matter comment:
+Pages live in src/pages/ and are wrapped in src/layout.html (header, footer,
+pop-ups and scripts shared by every page). Each page starts with front matter:
 
     <!--
-    title: Analytics
+    title: Scoring
     description: One sentence for search engines and link previews.
-    section: products
-    ru: https://data-wave.ru/products/uznajte-bolsheo-svoih-klientah/
+    body_class: wp-singular single single-products wp-theme-clean_template
+    ru: https://data-wave.ru/products/scoring/
     -->
 
-src/pages/products/analytics.html is written to site/products/analytics/index.html.
-Inside pages and the layout, {{root}} expands to the relative path of the site
-root, so the output works on any domain or sub-path (for example /en/).
-Shared blocks live in src/partials/ and are pulled into a page with
-<!-- include: name -->.
+src/pages/products/scoring.html becomes site/products/scoring/index.html.
+{{root}} expands to the relative path of the site root, so the output works on
+any domain or sub-path (for example /en/).
+
+site/assets/ holds the static files (theme styles, scripts, fonts, images) and
+is not generated. Every .html file elsewhere in site/ is generated and gets
+replaced on each build.
 """
 
 import html
 import http.server
 import re
-import shutil
 import sys
 from functools import partial
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 # Set to the public address of the English site (for example
 # "https://en.data-wave.ru") to add canonical links and a sitemap.
@@ -40,21 +42,11 @@ RU_HOME = "https://data-wave.ru/"
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "src"
 OUT = ROOT / "site"
+ASSETS = OUT / "assets"
 
 FRONT_MATTER = re.compile(r"\A<!--\s*\n(.*?)\n\s*-->\s*\n", re.S)
 PLACEHOLDER = re.compile(r"{{\s*(\w+)\s*}}")
-INCLUDE = re.compile(r"<!--\s*include:\s*([\w-]+)\s*-->")
 DECORATIVE_SVG = re.compile(r"<svg(?![^>]*aria-hidden)(?=[\s>])")
-
-
-def include_partials(text):
-    """Replace <!-- include: name --> with src/partials/name.html."""
-    def load(match):
-        partial = SRC / "partials" / f"{match.group(1)}.html"
-        if not partial.exists():
-            sys.exit(f"missing partial {partial.relative_to(ROOT)}")
-        return partial.read_text(encoding="utf-8").strip()
-    return INCLUDE.sub(load, text)
 
 
 def parse_page(path):
@@ -67,47 +59,57 @@ def parse_page(path):
         if line.strip():
             key, _, value = line.partition(":")
             meta[key.strip()] = value.strip()
-    for key in ("title", "description"):
-        if not meta.get(key):
-            sys.exit(f"{path}: front matter needs '{key}'")
+    if not meta.get("title"):
+        sys.exit(f"{path}: front matter needs 'title'")
     return meta, text[match.end():]
 
 
 def page_path(rel):
-    """src/pages/products/analytics.html -> 'products/analytics/'."""
+    """src/pages/products/scoring.html -> 'products/scoring/'."""
     parts = rel.with_suffix("").parts
     if parts[-1] == "index":
         parts = parts[:-1]
     return "/".join(parts) + "/" if parts else ""
 
 
+def mark_current(page, path):
+    """Highlight menu links to the current page the way the WordPress theme does."""
+    link = re.escape(f'href="{{{{root}}}}{path}"')
+    page = re.sub(r'(<li\b[^>]*\bclass=")([^"]*)("[^>]*>\s*<a\b[^>]*' + link + ")",
+                  r"\1\2 current-menu-item\3", page)
+    return page.replace(f'href="{{{{root}}}}{path}"', f'href="{{{{root}}}}{path}" aria-current="page"')
+
+
 def render(layout, meta, body, path):
     title = meta["title"] if path == "" else f"{meta['title']} | {BRAND}"
-    # "ru" names the equivalent Russian page. Pages without one still get a
-    # language switch (to the Russian home page) but no hreflang alternate.
+    # "ru" names the equivalent Russian page; it drives the RU switch and hreflang.
     ru = meta.get("ru") or RU_HOME
-    head_extra = []
+    head = []
+    if meta.get("description"):
+        desc = html.escape(meta["description"])
+        head.append(f'<meta name="description" content="{desc}">')
+        head.append(f'<meta property="og:description" content="{desc}">')
     if meta.get("ru"):
-        head_extra.append(f'<link rel="alternate" hreflang="ru" href="{html.escape(ru)}">')
+        head.append(f'<link rel="alternate" hreflang="ru" href="{html.escape(ru)}">')
     if SITE_URL:
         url = f"{SITE_URL.rstrip('/')}/{path}"
-        head_extra.append(f'<link rel="canonical" href="{url}">')
-        head_extra.append(f'<link rel="alternate" hreflang="en" href="{url}">')
-        head_extra.append(f'<meta property="og:url" content="{url}">')
+        head.append(f'<link rel="canonical" href="{url}">')
+        head.append(f'<link rel="alternate" hreflang="en" href="{url}">')
+        head.append(f'<meta property="og:url" content="{url}">')
     values = {
         "title": html.escape(title),
-        "description": html.escape(meta["description"]),
-        "section": meta.get("section", ""),
+        "body_class": html.escape(meta.get("body_class", "")),
         "ru": html.escape(ru),
-        "head_extra": "".join("\n  " + tag for tag in head_extra),
-        "content": include_partials(body).strip(),
+        "head_extra": "".join("\n  " + tag for tag in head),
+        "content": body.strip(),
     }
     page = PLACEHOLDER.sub(
         lambda m: values[m.group(1)] if m.group(1) in values else m.group(0),
         layout,
     )
-    # Mark links to the current page before {{root}} is resolved.
-    page = page.replace(f'href="{{{{root}}}}{path}"', f'href="{{{{root}}}}{path}" aria-current="page"')
+    # The page body may contain {{ru}} too (the RU switch lives in the layout).
+    page = page.replace("{{ru}}", values["ru"])
+    page = mark_current(page, path)
     root = "../" * path.count("/") or "./"
     page = page.replace("{{root}}", root)
     # Every inline SVG on the site is decorative; hide it from screen readers.
@@ -116,6 +118,21 @@ def render(layout, meta, body, path):
     if leftover:
         sys.exit(f"{path or 'home'}: unknown placeholder {leftover.group(0)}")
     return page
+
+
+def clean_output():
+    """Remove previously generated pages, keep site/assets."""
+    if not OUT.exists():
+        return
+    for file in OUT.rglob("*.html"):
+        if ASSETS not in file.parents:
+            file.unlink()
+    sitemap = OUT / "sitemap.xml"
+    if sitemap.exists():
+        sitemap.unlink()
+    for folder in sorted((p for p in OUT.rglob("*") if p.is_dir()), reverse=True):
+        if folder != ASSETS and ASSETS not in folder.parents and not any(folder.iterdir()):
+            folder.rmdir()
 
 
 def write_sitemap(paths):
@@ -137,16 +154,22 @@ class LinkCollector(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         for name, value in attrs:
-            if name == "id" and value:
+            if not value:
+                continue
+            if name == "id":
                 self.ids.add(value)
-            if name in ("href", "src") and value:
+            elif name in ("href", "src", "data-src", "poster"):
                 self.links.append(value)
+            elif name in ("srcset", "data-srcset"):
+                self.links += [part.strip().split(" ")[0] for part in value.split(",") if part.strip()]
 
 
 def check_links():
     """Fail the build if a relative link points to a missing file or anchor."""
     parsed = {}
     for file in OUT.rglob("*.html"):
+        if ASSETS in file.parents:
+            continue
         collector = LinkCollector()
         collector.feed(file.read_text(encoding="utf-8"))
         parsed[file.resolve()] = collector
@@ -158,21 +181,20 @@ def check_links():
                 continue
             target = file
             if parts.path:
-                target = (file.parent / parts.path).resolve()
+                target = (file.parent / unquote(parts.path)).resolve()
                 if parts.path.endswith("/"):
                     target = target / "index.html"
             if not target.exists():
                 errors.append(f"{file.relative_to(OUT)}: broken link {link}")
-            elif parts.fragment and target.suffix == ".html":
-                if parts.fragment not in parsed[target].ids:
-                    errors.append(f"{file.relative_to(OUT)}: missing anchor {link}")
-    return errors
+            elif parts.fragment and target in parsed and parts.fragment not in parsed[target].ids:
+                errors.append(f"{file.relative_to(OUT)}: missing anchor {link}")
+    return sorted(set(errors))
 
 
 def build():
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    shutil.copytree(SRC / "assets", OUT / "assets")
+    if not ASSETS.exists():
+        sys.exit("site/assets is missing")
+    clean_output()
     layout = (SRC / "layout.html").read_text(encoding="utf-8")
     paths = []
     for source in sorted((SRC / "pages").rglob("*.html")):
