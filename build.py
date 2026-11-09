@@ -33,9 +33,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-# Set to the public address of the English site (for example
-# "https://en.data-wave.ru") to add canonical links and a sitemap.
-SITE_URL = ""
+# Public address of the English site: used for canonical links, the English
+# hreflang tag, sitemap.xml and robots.txt. Set to "" to leave them out.
+SITE_URL = "https://data-wave.tech"
 
 BRAND = "Data Wave"
 RU_HOME = "https://data-wave.ru/"
@@ -127,9 +127,9 @@ def clean_output():
     for file in OUT.rglob("*.html"):
         if ASSETS not in file.parents:
             file.unlink()
-    sitemap = OUT / "sitemap.xml"
-    if sitemap.exists():
-        sitemap.unlink()
+    for name in ("sitemap.xml", "robots.txt"):
+        if (OUT / name).exists():
+            (OUT / name).unlink()
     for folder in sorted((p for p in OUT.rglob("*") if p.is_dir()), reverse=True):
         if folder != ASSETS and ASSETS not in folder.parents and not any(folder.iterdir()):
             folder.rmdir()
@@ -143,6 +143,9 @@ def write_sitemap(paths):
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"{urls}\n</urlset>\n",
         encoding="utf-8",
+    )
+    (OUT / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n", encoding="utf-8"
     )
 
 
